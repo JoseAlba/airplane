@@ -11,7 +11,11 @@ int echoPin=8;  //Sensor Echo pin connected to Arduino pin 11
 float pingTime;  //time for ping to travel from sensor to target and return
 float targetDistance; //Distance to Target in inches
 float speedOfSound=776.5; //Speed of sound in miles per hour when temp is 77 degrees.
+<<<<<<< HEAD
 int LEDpin=13;
+=======
+
+>>>>>>> 2047f5a5d8d2cc8689c896f1c03b7121126ea5f0
 
 void setup() 
 {
@@ -19,7 +23,10 @@ void setup()
   Serial.begin(9600);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+<<<<<<< HEAD
   pinMode(LEDpin, OUTPUT);
+=======
+>>>>>>> 2047f5a5d8d2cc8689c896f1c03b7121126ea5f0
 	lcd.begin(16, 2); //Initialize the 16x2 LCD
 
 
@@ -53,9 +60,15 @@ void loop()
   if(targetDistance < 15) //Checks distance to make sure it's low enough to read -- makes sure it ignores large numbers that are hard to format
   {
 	lcd.print(targetDistance); //Print the distance from the ultrasound to the object
+<<<<<<< HEAD
   if(targetDistance < 3)
     digitalWrite(LEDpin, HIGH);
   else
     digitalWrite(LEDpin, LOW);
   }
 }
+=======
+  }
+}
+
+>>>>>>> 2047f5a5d8d2cc8689c896f1c03b7121126ea5f0
